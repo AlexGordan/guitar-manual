@@ -1,36 +1,48 @@
 import React from "react";
 import styled from "styled-components";
-import { ChordTypes } from "../../../typings/Chord";
 
-interface IChordProps {
-  data: ChordTypes | null;
+const strings = [6, 5, 4, 3, 2, 1];
+const frets = [1, 2, 3, 4, 5];
+
+interface IProps {
+  nameOfChord: string;
+  children: any;
 }
 
-const Chord = ({ data }: IChordProps) => {
+const Chord = ({ nameOfChord, children }: IProps) => {
   return (
     <StyledContainer>
+      <NameOfChord>{nameOfChord}</NameOfChord>
       <BolderLine />
       <StringsContainer>
-        {[6, 5, 4, 3, 2, 1].map((_, index) => {
-          return <GuitarString index={index} />;
-        })}
+        {strings.map((_, i) => (
+          <GuitarString key={i} index={i} />
+        ))}
       </StringsContainer>
       <FretsContainer>
-        {[1, 2, 3, 4, 5].map((_) => {
-          return <Fret />;
-        })}
+        {frets.map((_, i) => (
+          <Fret key={i} />
+        ))}
       </FretsContainer>
+      {children}
     </StyledContainer>
   );
 };
+
+const NameOfChord = styled.div`
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: 600;
+`;
 
 const StyledContainer = styled.div`
   height: 200px;
   width: 180px;
   border: solid 2px;
   position: absolute;
-  left: 200px;
-  top: 200px;
 `;
 
 const BolderLine = styled.div`

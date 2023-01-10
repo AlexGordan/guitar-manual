@@ -55,4 +55,9 @@ type Em = {
   fret: 2;
 };
 
-export type ChordTypes = A | C | E | D | F | G | Am | Dm | Em;
+type H = {
+  numberOfString: 4;
+  fret: 2;
+};
+
+export type ChordTypes = A | C | D | E | F | G | H | Am | Dm | Em;
