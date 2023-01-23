@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Chord from "..";
+import Chord, { ChordCircle } from "..";
 
 const F = () => {
   return (
@@ -19,12 +19,7 @@ const F = () => {
 
 const Barre = styled.div``;
 
-const SixthStringB = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const SixthStringB = styled(ChordCircle)`
   top: 15px;
   left: -11px;
 `;
@@ -37,43 +32,23 @@ const Line = styled.div`
   top: 23px;
 `;
 
-const FirstStringB = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const FirstStringB = styled(ChordCircle)`
   top: 15px;
-  left: 171px;
+  left: 166px;
 `;
 
-const ThirdString = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const ThirdString = styled(ChordCircle)`
   top: 52px;
-  left: 98px;
+  left: 95px;
 `;
 
-const FourthString = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const FourthString = styled(ChordCircle)`
   top: 92px;
-  left: 62px;
+  left: 60px;
 `;
 
-const FifthString = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const FifthString = styled(ChordCircle)`
   top: 92px;
-  left: 25px;
+  left: 24px;
 `;
 export default F;

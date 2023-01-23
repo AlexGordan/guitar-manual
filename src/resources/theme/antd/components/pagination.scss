@@ -1,0 +1,9 @@
+.ant-pagination {
+  .ant-pagination-item-active {
+    border-color: $gray-color;
+
+    a {
+      color: $gray-color;
+    }
+  }
+}

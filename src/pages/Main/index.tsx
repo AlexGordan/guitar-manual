@@ -1,5 +1,9 @@
 import React from "react";
+
+// helpers
 import styled from "styled-components";
+
+// components
 import Main from "../../modules/Main";
 
 const MainPage = () => {
@@ -18,10 +22,8 @@ const Container = styled.div`
   column-gap: 20px;
   row-gap: 20px;
   position: relative;
-  height: 202px;
-  width: 184px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 40px;
 `;
 
 export default MainPage;

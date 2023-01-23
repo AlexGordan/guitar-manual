@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Chord from "..";
+import Chord, { ChordCircle } from "..";
 
 const A = () => {
   return (
@@ -12,34 +12,19 @@ const A = () => {
   );
 };
 
-const FourthString = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const FourthString = styled(ChordCircle)`
   top: 52px;
-  left: 62px;
+  left: 60px;
 `;
 
-const ThirdString = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const ThirdString = styled(ChordCircle)`
   top: 52px;
-  left: 98px;
+  left: 95px;
 `;
 
-const SecondString = styled.div`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: black;
-  border-radius: 50%;
+const SecondString = styled(ChordCircle)`
   top: 52px;
-  left: 135px;
+  left: 131px;
 `;
 
 export default A;

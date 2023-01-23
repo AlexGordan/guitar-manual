@@ -1,8 +1,9 @@
-import { Table } from "antd";
-import React, { useEffect, useMemo, useState } from "react";
-import styled from "styled-components";
+import React, { useMemo, useState } from "react";
+
+// components
 import Button from "../../components/Button";
-import AddSongModal from "../../components/Main/AddSongModal";
+import AddSongModal from "../../components/Modals/TemplateModalDialogs/Main/AddSongModal";
+import { Table } from "antd";
 
 export interface ISong {
   author: string;
@@ -40,16 +41,13 @@ const Main = () => {
     ];
   }, []);
 
-
-  // const er
-
   return (
     <>
       <Button text="Add song" onClick={handleClick} />
-      {isVisible && (
-        <AddSongModal title="Add song" isVisible={isVisible} onCancel={() => setIsVisible(false)} onOk={handleAdd} />
-      )}
-      <Table dataSource={songs} columns={columns} />
+
+      <Table size="large" dataSource={songs} columns={columns} />
+
+      {isVisible && <AddSongModal title="Add song" isVisible={isVisible} closeCallback={() => setIsVisible(false)} onSubmit={handleAdd} />}
     </>
   );
 };

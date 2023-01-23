@@ -81,4 +81,12 @@ const Fret = styled.div`
   background: black;
 `;
 
+export const ChordCircle = styled.div`
+  position: absolute;
+  height: 21px;
+  width: 21px;
+  background: black;
+  border-radius: 50%;
+`;
+
 export default Chord;

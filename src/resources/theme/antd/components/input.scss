@@ -1,0 +1,28 @@
+// Google Chrome autofill color fix
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  color: $input-text-color !important;
+  -webkit-text-fill-color: $input-text-color !important;
+  caret-color: $input-text-color;
+  transition: background-color 50000s ease-in-out 0s;
+}
+
+.ant-input {
+  color: black;
+
+  margin: $margin-sm 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid black;
+    box-shadow: none;
+  }
+}
